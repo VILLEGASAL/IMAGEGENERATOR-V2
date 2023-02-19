@@ -1,0 +1,57 @@
+body{
+
+    background-color: black;
+    text-align: center;
+}
+
+textarea{
+
+    resize: none;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+input{
+
+    text-align: center;
+    border-radius: 10px;
+}
+
+.__main-container{
+
+    text-align: center;
+}
+
+/* .__display-area{
+
+    text-align: center;
+} */
+
+.__row-container{
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.footer-container{
+
+    text-align: center;
+}
+
+.__center{
+
+    text-align: center;
+}
+
+
+@media (max-width: 992px) {
+    
+
+    .__row{
+
+        display: grid;
+        place-content: center;
+    }
+}

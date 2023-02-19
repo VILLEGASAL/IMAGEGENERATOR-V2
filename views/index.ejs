@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="__main-container container mt-3">
+        <form action="/" method="POST">
+            <textarea name="imgDescription" class="w-100 p-3" cols="30" rows="3" placeholder="ENTER IMAGE DESCRIPTION (e.g A cat watching a tv) . . ." required></textarea>
+            
+            <div>
+                <input type="number" class="w-100 pt-2 pb-2" name="numberOfImg" placeholder="NUMBER OF IMAGE TO GENERATE . . ." required>
+            </div>
+            
+            <button type="submit" class="btn btn-success mt-3 w-100">GENERATE</button>
+        </form>
+    </div>
+
+    <div class="container mt-3">
+        <div class="__row row">
+            <% url.forEach(img => { %>
+                <div class="__col col col-md-3 col-lg-4 mb-2">
+                    <img src="<%= img.url %>" alt="">
+                </div>
+            <% }) %>
+        </div>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
